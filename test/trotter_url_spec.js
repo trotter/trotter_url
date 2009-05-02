@@ -1,13 +1,13 @@
 /*extern Screw, CentralDispatch, describe, it,
          expect, equal, before, include, match */
 Screw.Unit(function () {
-    describe("Trotter.Url", function () {
+    describe("Trotter.URL", function () {
         var url, input;
 
         describe("Parsing an absolute URL", function () {
             before(function () {
                 input = "http://trotter:test@localhost:3000/the/whole/path.js?firstname=bob&lastname=jones#theFrag"
-                url = new Trotter.Url(input);
+                url = new Trotter.URL(input);
             });
 
             it("should convert to a string", function () {
@@ -46,7 +46,7 @@ Screw.Unit(function () {
         describe("Parsing a relative URL", function () {
             before(function () {
                 input = "//trotter:test@localhost:3000/the/whole/path.js?firstname=bob&lastname=jones#theFrag"
-                url = new Trotter.Url(input);
+                url = new Trotter.URL(input);
             });
 
             it("should convert to a string", function () {
